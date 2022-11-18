@@ -1,7 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useAuthState, useSignOut } from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import logo from "../../assets/logo/logo.png";
+import auth from "../../firebase.init";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const [user] = useAuthState(auth);
+  const [signOut] = useSignOut(auth);
+
+  const Logout = () => {
+    signOut();
+    navigate("/home");
+  };
+
   const menuItems = (
     <>
       <li>
@@ -20,7 +32,13 @@ const Navbar = () => {
         <Link to="/about">About</Link>
       </li>
       <li>
-        <Link to="/login">Login</Link>
+        {user ? (
+          <button onClick={Logout} className="btn btn-ghost">
+            Sign Out
+          </button>
+        ) : (
+          <Link to="/login">Login</Link>
+        )}
       </li>
     </>
   );
@@ -51,7 +69,9 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">Doctors portal</a>
+        <Link to="/home">
+          <img className="h-10" src={logo} alt="" />
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>

@@ -1,20 +1,21 @@
 import { format } from "date-fns";
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 
 const BookingModal = ({ treatment, date, setTreatment }) => {
+  const [user] = useAuthState(auth);
 
-const handleBooking = e =>{
-  e.preventDefault();
-  const date = e.target.date.value;
-  const slot = e.target.slot.value;
-  const name = e.target.name.value;
-  const email = e.target.email.value;
-  const phone = e.target.phone.value;
-  console.log({date, slot,name, email, phone})
-  setTreatment(null)
-}
-
-
+  const handleBooking = (e) => {
+    e.preventDefault();
+    const date = e.target.date.value;
+    const slot = e.target.slot.value;
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const phone = e.target.phone.value;
+    console.log({ date, slot, name, email, phone });
+    setTreatment(null);
+  };
 
   return (
     <div>
@@ -25,7 +26,10 @@ const handleBooking = e =>{
             Booking for: {treatment.name}
           </h3>
 
-          <form onSubmit={handleBooking} className="grid grid-cols-1 gap-2 justify-items-center mt-4">
+          <form
+            onSubmit={handleBooking}
+            className="grid grid-cols-1 gap-2 justify-items-center mt-4"
+          >
             <input
               type="text"
               name="date"
@@ -34,16 +38,21 @@ const handleBooking = e =>{
               className="input input-bordered w-full max-w-xs"
             />
 
-            <select name="slot" className="select select-bordered w-full max-w-xs">
-            {
-              treatment.slots.map(slot => <option>{slot}</option>)
-            } 
+            <select
+              name="slot"
+              required
+              className="select select-bordered w-full max-w-xs"
+            >
+              {treatment.slots.map((slot, index) => (
+                <option key={index}>{slot}</option>
+              ))}
             </select>
 
             <input
               type="text"
               name="name"
-              placeholder="Full Name"
+              disabled
+              value={user?.displayName || ""}
               className="input input-bordered w-full max-w-xs"
             />
 
@@ -51,13 +60,15 @@ const handleBooking = e =>{
               type="text"
               name="phone"
               placeholder="Phone Number"
+              required
               className="input input-bordered w-full max-w-xs"
             />
 
             <input
               type="email"
               name="email"
-              placeholder="Email"
+              disabled
+              value={user?.email || ""}
               className="input input-bordered w-full max-w-xs"
             />
 

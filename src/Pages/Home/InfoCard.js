@@ -1,7 +1,6 @@
 import React from "react";
 
-
-const InfoCard = ({img,cardTitle,bgClass,cardSubTitle}) => {
+const InfoCard = ({ img, cardTitle, bgClass, cardSubTitle }) => {
   return (
     <>
       <div className={`p-2 card lg:card-side shadow-xl ${bgClass}`}>
@@ -13,7 +12,6 @@ const InfoCard = ({img,cardTitle,bgClass,cardSubTitle}) => {
           <h2 className="card-title">{cardTitle}</h2>
           <p>{cardSubTitle}</p>
         </div>
-
       </div>
     </>
   );

@@ -19,10 +19,9 @@ const Service = ({ service, setTreatment }) => {
             {slots.length} {slots.length > 1 ? "Spaces" : "Space"} Available
           </p>
           <div className="card-actions justify-center">
-            
             <label
-            onClick={() => setTreatment(service)}
-            disabled={slots.length === 0}
+              onClick={() => setTreatment(service)}
+              disabled={slots.length === 0}
               htmlFor="booking-modal"
               className="btn btn-sm btn-primary uppercase font-bold text-white bg-gradient-to-r from-secondary to-primary"
             >
@@ -36,5 +35,3 @@ const Service = ({ service, setTreatment }) => {
 };
 
 export default Service;
-
-// <button disabled={slots.length === 0} className="btn btn-primary uppercase font-bold text-white bg-gradient-to-r from-secondary to-primary">Book Appointment</button>

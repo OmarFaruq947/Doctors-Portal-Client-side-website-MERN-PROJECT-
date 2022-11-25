@@ -37,7 +37,6 @@ const ContactForm = () => {
                 <textarea
                   name="message"
                   type="text"
-                  
                   required
                   className="mt-8 relative block w-full appearance-none rounded-lg border border-gray-300 px-3 py-8 text-gray-900 placeholder-gray-500 sm:text-sm"
                   placeholder="Message"

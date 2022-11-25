@@ -7,23 +7,25 @@ import {
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+import useToken from "../../Hooks/useToken";
 import Loading from "../Shared/Loading";
 
 const Signup = () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
-    useSignInWithGoogle(auth);
-
-  const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
-
-  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-
+    useSignInWithGoogle(auth); //ok....75-2
   const {
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm();
+  } = useForm(); //ok....75-2
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth); //ok....75-2
+
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth); //ok....75-2
+  const [token] = useToken(user || googleUser); //ok....75-2
   const navigate = useNavigate();
+
+  console.log("token", token);
 
   //error
   let signInError;
@@ -43,16 +45,15 @@ const Signup = () => {
   }
 
   // getting data
-  if (googleUser || user) {
-    console.log(googleUser, user);
+  if (token) {
+    navigate("/appointment");
   }
 
   //pik data from form
   const onSubmit = async (data) => {
-    console.log(data);
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
-    navigate("/appointment");
+    // navigate("/appointment");
   };
   return (
     <>

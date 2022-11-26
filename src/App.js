@@ -4,7 +4,9 @@ import "react-toastify/dist/ReactToastify.css";
 import About from "./Pages/About/About";
 import Appointment from "./Pages/Appointment/Appointment";
 import Contact from "./Pages/Contact/Contact";
+import AddDoctor from "./Pages/Dashboard/AddDoctor";
 import Dashboard from "./Pages/Dashboard/Dashboard";
+import ManageDoctors from "./Pages/Dashboard/ManageDoctors";
 import MyAppointment from "./Pages/Dashboard/MyAppointment";
 import MyHistory from "./Pages/Dashboard/MyHistory";
 import MyReview from "./Pages/Dashboard/MyReview";
@@ -50,6 +52,24 @@ function App() {
             element={
               <RequireAuth>
                 <Users />
+              </RequireAuth>
+            }
+          />
+
+          <Route
+            path="addDoctor"
+            element={
+              <RequireAuth>
+                <AddDoctor />
+              </RequireAuth>
+            }
+          />
+
+          <Route
+            path="manageDoctor"
+            element={
+              <RequireAuth>
+                <ManageDoctors />
               </RequireAuth>
             }
           />

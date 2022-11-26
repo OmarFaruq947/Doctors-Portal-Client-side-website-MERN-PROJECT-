@@ -17,7 +17,7 @@ const Signup = () => {
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm(); //ok....75-2
+  } = useForm();
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth); //ok....75-2
 
@@ -53,7 +53,6 @@ const Signup = () => {
   const onSubmit = async (data) => {
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
-    // navigate("/appointment");
   };
   return (
     <>

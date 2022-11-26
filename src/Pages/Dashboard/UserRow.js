@@ -1,5 +1,7 @@
 import React from "react";
 import { toast } from "react-toastify";
+import cancel from "../../assets/icons/delete.png";
+import UserDeleteConfirmationModal from "./UserDeleteConfirmationModal";
 
 const UserRow = ({ user, index, refetch }) => {
   const { email, role } = user;
@@ -24,6 +26,12 @@ const UserRow = ({ user, index, refetch }) => {
         }
       });
   };
+
+  //userDeleteHandler
+  const userDeleteHandler = () => {
+    console.log("click");
+    <UserDeleteConfirmationModal />;
+  };
   return (
     <>
       <tr>
@@ -44,8 +52,10 @@ const UserRow = ({ user, index, refetch }) => {
             )}
           </p>
         </td>
-        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-          <button className="btn btn-warning btn-xs">Remove User</button>
+        <td className="p-1  border-b border-gray-200 bg-white text-sm">
+          <button onClick={userDeleteHandler} className="btn btn-accent">
+            <img className="w-5" src={cancel} alt="..." />
+          </button>
         </td>
       </tr>
     </>

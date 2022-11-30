@@ -10,7 +10,7 @@ const DoctorsDeleteConfirmModal = ({
 
   // delete doctor
   const handleDelete = () => {
-    fetch(`http://localhost:5000/doctors/${email}`, {
+    fetch(`https://doctors-portal24.onrender.com/doctors/${email}`, {
       method: "DELETE",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

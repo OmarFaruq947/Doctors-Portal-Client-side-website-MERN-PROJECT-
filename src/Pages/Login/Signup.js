@@ -25,8 +25,6 @@ const Signup = () => {
   const [token] = useToken(user || googleUser); //ok....75-2
   const navigate = useNavigate();
 
-  console.log("token", token);
-
   //error
   let signInError;
   if (error || googleError || updateError) {

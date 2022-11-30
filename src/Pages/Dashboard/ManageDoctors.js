@@ -9,7 +9,7 @@ const ManageDoctors = () => {
     isLoading,
     refetch,
   } = useQuery("doctors", () =>
-    fetch(`http://localhost:5000/doctors`, {
+    fetch(`https://doctors-portal24.onrender.com/doctors`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },

@@ -8,7 +8,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import useToken from "../../Hooks/useToken";
 import Loading from "../Shared/Loading";
-import EmailVerification from "./EmailVerification";
 
 const Login = () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
@@ -183,7 +182,6 @@ const Login = () => {
           </div>
         </form>
       </div>
-      <EmailVerification />
     </>
   );
 };

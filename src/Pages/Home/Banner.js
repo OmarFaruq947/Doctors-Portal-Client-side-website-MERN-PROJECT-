@@ -9,7 +9,7 @@ const Banner = () => {
           <img
             src={chair}
             alt="..."
-            className="max-w-sm rounded-lg shadow-2xl"
+            className="lg:max-w-xl md:max-w-lg sm:max-w-md rounded-lg shadow-2xl"
           />
           <div>
             <h1 className="text-5xl font-bold">Your New Smile Starts Here</h1>

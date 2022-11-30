@@ -30,7 +30,7 @@ const ComingSoon = () => {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <a
-              href="https://www.facebook.com/QuickToolz"
+              href="/#"
               title="Quicktoolz On Facebook"
               className="md:w-32 tracking-wide font-bold rounded border-2 border-indigo-500 hover:text-white hover:border-blue-600 hover:bg-blue-600 shadow-md py-2 px-6 inline-flex items-center transition duration-500"
             >
@@ -38,7 +38,7 @@ const ComingSoon = () => {
             </a>
 
             <a
-              href="https://twitter.com/quicktoolz"
+              href="/#"
               title="Quicktoolz On Twitter"
               className="md:w-32 tracking-wide font-bold rounded border-2 border-indigo-500 hover:text-white hover:border-blue-500 hover:bg-blue-500 shadow-md py-2 px-6 inline-flex items-center transition duration-500"
             >
@@ -46,7 +46,7 @@ const ComingSoon = () => {
             </a>
 
             <a
-              href="https://pinterest.com/quicktoolz/"
+              href="/#"
               title="Quicktoolz On Pinterest"
               className="md:w-32 tracking-wide font-bold rounded border-2 border-indigo-500 hover:text-white hover:border-red-600 hover:bg-red-600 shadow-md py-2 px-6 inline-flex items-center transition duration-500"
             >
@@ -54,7 +54,7 @@ const ComingSoon = () => {
             </a>
 
             <a
-              href="https://www.reddit.com/user/quicktoolz/"
+              href="/#"
               title="Quicktoolz On Facebook"
               className="md:w-32 tracking-wide font-bold rounded border-2 border-indigo-500 hover:text-white hover:border-yellow-600 hover:bg-yellow-600 shadow-md py-2 px-6 inline-flex items-center transition duration-500"
             >

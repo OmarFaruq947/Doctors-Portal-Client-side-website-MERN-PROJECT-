@@ -27,7 +27,7 @@ const AppointmentBanner = ({ date, setDate }) => {
           <img
             src={Chair}
             alt="Dentist Chair"
-            className="max-w-sm rounded-lg shadow-2xl"
+            className="lg:max-w-xl md:max-w-lg sm:max-w-md rounded-lg shadow-2xl"
           />
           <div>
             <style>{css}</style>

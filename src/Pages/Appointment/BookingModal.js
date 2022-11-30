@@ -6,7 +6,7 @@ import auth from "../../firebase.init";
 
 const BookingModal = ({ treatment, date, setTreatment, refetch }) => {
   const [user] = useAuthState(auth);
-  const { name, slots } = treatment;
+  const { name, slots, price } = treatment;
   const formattedDate = format(date, "PP");
 
   const handleBooking = (e) => {
@@ -18,12 +18,13 @@ const BookingModal = ({ treatment, date, setTreatment, refetch }) => {
       treatment: name,
       date: formattedDate,
       slot,
+      price,
       patient: user.email,
       patientName: user.displayName,
       phone: e.target.phone.value,
     };
 
-    fetch("http://localhost:5000/booking", {
+    fetch("https://doctors-portal24.onrender.com/booking", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -40,7 +41,6 @@ const BookingModal = ({ treatment, date, setTreatment, refetch }) => {
           );
         }
         refetch();
-        // close modal
         setTreatment(null);
       });
   };

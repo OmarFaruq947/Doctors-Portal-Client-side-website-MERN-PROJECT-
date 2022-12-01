@@ -20,7 +20,7 @@ const ContactForm = () => {
                   type="email"
                   placeholder="Email Address"
                   required
-                  className="mt-8 relative block w-full appearance-none rounded-lg border border-gray-300 px-3 py-3 text-gray-900 placeholder-gray-500  sm:text-sm"
+                  className="mt-8 relative block w-full appearance-none rounded-lg border border-gray-300 px-3 py-3 text-accent-900 placeholder-gray-500  sm:text-sm"
                 />
               </div>
               <div>
@@ -28,7 +28,7 @@ const ContactForm = () => {
                   name="Subject"
                   type="text"
                   required
-                  className="mt-8 relative block w-full appearance-none rounded-lg border border-gray-300 px-3 py-3 text-gray-900 placeholder-gray-500 sm:text-sm"
+                  className="mt-8 relative block w-full appearance-none rounded-lg border border-gray-300 px-3 py-3 text-accent-900 placeholder-gray-500 sm:text-sm"
                   placeholder="Subject"
                 />
               </div>
@@ -38,7 +38,7 @@ const ContactForm = () => {
                   name="message"
                   type="text"
                   required
-                  className="mt-8 relative block w-full appearance-none rounded-lg border border-gray-300 px-3 py-8 text-gray-900 placeholder-gray-500 sm:text-sm"
+                  className="mt-8 relative block w-full appearance-none rounded-lg border border-gray-300 px-3 py-8 text-accent-900 placeholder-gray-500 sm:text-sm"
                   placeholder="Message"
                 />
               </div>

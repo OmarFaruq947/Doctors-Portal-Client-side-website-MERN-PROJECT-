@@ -35,15 +35,15 @@ const UserRow = ({ user, index, refetch }) => {
     <>
       <tr>
         <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-          <p className="text-gray-900 whitespace-no-wrap">{index + 1}</p>
+          <p className="text-accent-900 whitespace-no-wrap">{index + 1}</p>
         </td>
 
         <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-          <p className="text-gray-900 whitespace-no-wrap">{email}</p>
+          <p className="text-accent-900 whitespace-no-wrap">{email}</p>
         </td>
 
         <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-          <p className="text-gray-900 whitespace-no-wrap">
+          <p className="text-accent-900 whitespace-no-wrap">
             {role !== "admin" && (
               <button onClick={makeAdmin} className="btn btn-primary btn-xs">
                 Make Admin

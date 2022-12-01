@@ -1,12 +1,7 @@
 import React from "react";
-import ComingSoon from "../Shared/ComingSoon";
 
 const About = () => {
-  return (
-    <div>
-      <ComingSoon />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default About;

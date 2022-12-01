@@ -154,17 +154,17 @@ const AddDoctor = () => {
             </label>
 
             {/* photo upload */}
-            <div class="mb-6 pt-4">
-              <label class="mb-5 block text-xl font-semibold text-[#07074D]">
+            <div className="mb-6 pt-4">
+              <label className="mb-5 block text-xl font-semibold text-[#07074D]">
                 Profile photo
               </label>
 
-              <div class="mb-8">
+              <div className="mb-8">
                 <input
                   type="file"
                   name="file"
                   id="file"
-                  class="sr-only"
+                  className="sr-only"
                   {...register("image", {
                     required: {
                       value: true,
@@ -174,10 +174,10 @@ const AddDoctor = () => {
                 />
                 <label
                   for="file"
-                  class="relative flex min-h-[200px] items-center justify-center rounded-md border border-dashed border-[#e0e0e0] p-12 text-center"
+                  className="relative flex min-h-[200px] items-center justify-center rounded-md border border-dashed border-[#e0e0e0] p-12 text-center"
                 >
                   <div>
-                    <span class="mb-2 block text-base font-medium text-[#6B7280]">
+                    <span className="mb-2 block text-base font-medium text-[#6B7280]">
                       .jpeg, .png (file size maximum 5MB) <br />
                       {errors.image?.type === "required" && (
                         <span className="label-text-alt font-medium text-red-500 pb-2">
@@ -185,7 +185,7 @@ const AddDoctor = () => {
                         </span>
                       )}
                     </span>
-                    <span class="inline-flex rounded border border-[#e0e0e0] py-2 px-7 text-base font-medium text-[#07074D]">
+                    <span className="inline-flex rounded border border-[#e0e0e0] py-2 px-7 text-base font-medium text-[#07074D]">
                       Browse
                     </span>
                   </div>
@@ -193,12 +193,12 @@ const AddDoctor = () => {
               </div>
 
               {imgFileName && (
-                <div class="rounded-md bg-[#F5F7FB] py-4 px-8">
-                  <div class="flex items-center justify-between">
-                    <span class="truncate pr-3 text-base font-medium text-[#07074D]">
+                <div className="rounded-md bg-[#F5F7FB] py-4 px-8">
+                  <div className="flex items-center justify-between">
+                    <span className="truncate pr-3 text-base font-medium text-[#07074D]">
                       {imgFileName}
                     </span>
-                    <button class="text-[#07074D]">
+                    <button className="text-[#07074D]">
                       <svg
                         width="10"
                         height="10"
@@ -221,8 +221,8 @@ const AddDoctor = () => {
                       </svg>
                     </button>
                   </div>
-                  <div class="relative mt-5 h-[6px] w-full rounded-lg bg-[#E2E5EF]">
-                    <div class="absolute left-0 right-0 h-full w-[75%] rounded-lg bg-[#6A64F1]"></div>
+                  <div className="relative mt-5 h-[6px] w-full rounded-lg bg-[#E2E5EF]">
+                    <div className="absolute left-0 right-0 h-full w-[75%] rounded-lg bg-[#6A64F1]"></div>
                   </div>
                 </div>
               )}

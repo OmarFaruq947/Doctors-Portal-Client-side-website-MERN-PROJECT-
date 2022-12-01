@@ -3,21 +3,22 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import About from "./Pages/About/About";
 import Appointment from "./Pages/Appointment/Appointment";
+import Blog from "./Pages/Blog/Blog";
 import Contact from "./Pages/Contact/Contact";
 import AddDoctor from "./Pages/Dashboard/AddDoctor";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import ManageDoctors from "./Pages/Dashboard/ManageDoctors";
 import MyAppointment from "./Pages/Dashboard/MyAppointment";
-import MyHistory from "./Pages/Dashboard/MyHistory";
-import MyReview from "./Pages/Dashboard/MyReview";
 import Payment from "./Pages/Dashboard/Payment";
 import Users from "./Pages/Dashboard/Users";
 import DeveloperProfile from "./Pages/DeveloperProfile/DeveloperProfile";
+import Faq from "./Pages/FAQ/Faq";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import RequireAuth from "./Pages/Login/RequireAuth";
 import Signup from "./Pages/Login/Signup";
 import NoMatch from "./Pages/NoMatch/NoMatch";
+import Pricing from "./Pages/Pricing/Pricing";
 import Review from "./Pages/Review/Review";
 import Navbar from "./Pages/Shared/Navbar";
 
@@ -46,8 +47,7 @@ function App() {
           }
         >
           <Route index element={<MyAppointment />} />
-          <Route path="myReview" element={<MyReview />} />
-          <Route path="history" element={<MyHistory />} />
+          <Route path="pricing" element={<Pricing />} />
           <Route path="payment/:id" element={<Payment />} />
           <Route
             path="users"
@@ -79,6 +79,8 @@ function App() {
 
         <Route path="/review" element={<Review />} />
         <Route path="/about" element={<About />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />

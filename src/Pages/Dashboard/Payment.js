@@ -27,7 +27,7 @@ const Payment = () => {
 
   return (
     <>
-      <section className="flex flex-col justify-center antialiased bg-[#F1F5F9] text-gray-600 min-h-screen p-4">
+      <section className="flex flex-col justify-center antialiased bg-[#F1F5F9] text-accent-600 min-h-screen p-4">
         <div className="h-full">
           <div className="max-w-[450px] mx-auto">
             <div className="bg-white shadow-lg rounded-lg mt-9">
@@ -43,7 +43,7 @@ const Payment = () => {
                   />
                 </svg>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-1">
+                <h3 className="text-xl font-bold text-accent-900 mb-1">
                   Pay for{" "}
                   <span className="text-primary">
                     "{appointment.treatment}"

@@ -1,6 +1,6 @@
 import React from "react";
 
-const MyReview = () => {
+const pricing = () => {
   return (
     <div>
       <p>my review component....................</p>
@@ -8,4 +8,4 @@ const MyReview = () => {
   );
 };
 
-export default MyReview;
+export default pricing;

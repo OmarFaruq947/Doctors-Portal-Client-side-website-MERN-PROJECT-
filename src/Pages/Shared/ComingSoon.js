@@ -20,7 +20,7 @@ const ComingSoon = () => {
           <h1 className="text-4xl font-bold uppercase text-indigo-600 transition duration-500">
             Coming Soon
           </h1>
-          <h2 className="text-xl text-gray-700 transition duration-500">
+          <h2 className="text-xl text-accent-700 transition duration-500">
             We are almost there to introduce our new{" "}
             <a className="hover:underline" href="https://www.emojimania.org">
               emoji

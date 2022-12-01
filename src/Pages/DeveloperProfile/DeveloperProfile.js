@@ -13,10 +13,10 @@ const DeveloperProfile = () => {
             />
           </div>
           <div className="mt-8 md:mt-0 lg:justify-end col-span-2">
-            <h1 className="text-4xl text-gray-800 text-center md:text-left font-bold mb-6">
+            <h1 className="text-4xl text-accent-800 text-center md:text-left font-bold mb-6">
               Hi, I am Omar faruq, Creative Technologist
             </h1>
-            <p className="text-xl text-gray-800 text-center md:text-left">
+            <p className="text-xl text-accent-800 text-center md:text-left">
               Hi, I am Omar Faruq, I studied information and communication
               engineering, at Bangladesh army university of engineering and
               technology (BAUET). I am a curious learner. I love to learn new
